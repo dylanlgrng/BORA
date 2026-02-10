@@ -4,35 +4,14 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>BORA</title>
-  <meta name="description" content="BORA — site vide (starter GitHub Pages) servi sous /BORA" />
+  <meta name="description" content="BORA — socle logiciel metier React" />
   <link rel="icon" href="./assets/favicon.svg" />
   <link rel="stylesheet" href="./assets/style.css" />
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
 </head>
 <body>
-  <main class="wrap">
-    <header class="top">
-      <div class="badge">BORA</div>
-      <h1>Ça marche ✅</h1>
-      <p class="muted">
-        Si tu vois cette page via <code>/BORA</code>, ton déploiement GitHub Pages est OK.
-      </p>
-    </header>
-
-    <section class="card">
-      <h2>À modifier</h2>
-      <ul>
-        <li>Édite <code>index.html</code> pour mettre ton contenu.</li>
-        <li>Édite <code>assets/style.css</code> pour le style.</li>
-      </ul>
-      <p class="note">
-        Ce starter utilise des chemins relatifs (<code>./assets/…</code>) pour fonctionner
-        sans config spéciale sous <code>/BORA</code>.
-      </p>
-    </section>
-
-    <footer class="foot">
-      <span class="muted">BORA • GitHub Pages starter</span>
-    </footer>
-  </main>
+  <div id="root"></div>
+  <script src="./assets/app.js"></script>
 </body>
 </html>
