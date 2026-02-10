@@ -4,7 +4,10 @@
   --line: #d9dde3;
   --text: #1f2630;
   --muted: #6c7685;
-  --bar: #eef1f5;
+  --bar: #0f5db8;
+  --bar-text: #ffffff;
+  --bar-hover: rgba(255, 255, 255, 0.16);
+  --bar-pressed: rgba(255, 255, 255, 0.24);
 }
 
 * {
@@ -35,15 +38,80 @@ body {
 .top-bar {
   display: flex;
   align-items: center;
-  padding: 0 20px;
-  border-bottom: 1px solid var(--line);
+  justify-content: space-between;
+  gap: 14px;
+  padding: 0 12px;
+  border-bottom: 1px solid #0a4f9f;
   background: var(--bar);
+  color: var(--bar-text);
 }
 
-.top-bar-title {
-  font-size: 15px;
+.top-bar-left,
+.top-bar-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.top-action-button {
+  height: 34px;
+  border: 0;
+  border-radius: 8px;
+  padding: 0 10px;
+  background: transparent;
+  color: var(--bar-text);
+  font-size: 13px;
   font-weight: 600;
-  letter-spacing: 0.02em;
+  cursor: pointer;
+}
+
+.top-action-button:hover {
+  background: var(--bar-hover);
+}
+
+.top-action-button:active {
+  background: var(--bar-pressed);
+}
+
+.top-bar-client {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.client-label {
+  font-size: 12px;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.client-number-field {
+  height: 34px;
+  width: 170px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 8px;
+  padding: 0 10px;
+  background: rgba(255, 255, 255, 0.14);
+  color: var(--bar-text);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.copy-client-button {
+  height: 34px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 8px;
+  padding: 0 10px;
+  background: rgba(255, 255, 255, 0.14);
+  color: var(--bar-text);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.copy-client-button:hover {
+  background: var(--bar-hover);
 }
 
 .app-body {
@@ -82,6 +150,26 @@ body {
 }
 
 @media (max-width: 860px) {
+  .top-bar {
+    padding: 8px;
+    height: auto;
+    flex-wrap: wrap;
+  }
+
+  .top-bar-left,
+  .top-bar-right {
+    width: 100%;
+  }
+
+  .top-bar-client {
+    order: 3;
+    width: 100%;
+  }
+
+  .client-number-field {
+    width: 100%;
+  }
+
   .app-body {
     grid-template-columns: 72px 1fr;
   }
